@@ -1,0 +1,27 @@
+1.Heroku
+--- Create Procfile
+--- Write this code this file: "web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app"
+2.Render
+--- Create Web Service on Render
+--- Start Command: uvicorn app:app --host 0.0.0.0 --port 10000
+3.Vercel
+--- Create versel.json file
+--- Write this:
+            {
+    "builds": [{
+        "src": "app.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        }
+    ]
+}
+4.VPS Server
+--- Use this article: https://dylancastillo.co/fastapi-nginx-gunicorn/
+5.Railway
+--- Create Procfile--
+--- Write this code this file: "web: uvicorn app.main:app --host=0.0.0.0 --port=${PORT:-5000}"
