@@ -9,7 +9,7 @@ from fb_downloader import *
 app = FastAPI(
     docs_url='/',
     redoc_url='/redoc',
-    title="Full Downloader API by Bekhzod Asliddinov",
+    title="Full Downloader API by Shuxriddin Solixov",
     version='1.0.0',
     openapi_url='/api/v1/openapi.json',
 )
